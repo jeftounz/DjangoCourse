@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Django</title>
+</head>
+<body>
+    <!--<h1>Hola mundo, este es mi segunda vista!!!</h1>
+    <p>Esta vez utilizando un html como template</p>
+    <span>La ubicacion es /home/templates/home/index.html</span>-->
+    <h1>{{ message }}</h1> 
+    <!--Estamos utilizando el contexto en el archivo views de la carpeta home-->
+    <h2>{{ message2 }}</h2>
+    <ul>
+        {% for task in tasks %}
+        <li>{{ task }}</li>
+        {% endfor %}
+    </ul>
+    
+    {% if not emptyList %}
+    <span>La lista esta vacia</span>
+    {% else %}
+    <span>La lista tiene objetos en ella</span>
+    {% endif %}
+</body>
+</html>
