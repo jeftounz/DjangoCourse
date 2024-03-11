@@ -8,3 +8,6 @@ from django.db import models
 class Task(models.Model):
     description=models.CharField(max_length=255)
     done=models.BooleanField()
+
+#NOTA:cada vez que hacemos una migracion utilizando el manage.py 
+#Los modelos creados aqui se conviernten en tablas de SQL lite

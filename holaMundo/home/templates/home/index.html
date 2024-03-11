@@ -13,7 +13,7 @@
     <h2>{{ message2 }}</h2>
     <ul>
         {% for task in tasks %}
-        <li>{{ task }}</li>
+        <li>{{ task.description }} - {% if task.done  %}Terminada{% else %}Aun falta por hacer{% endif %}</li>
         {% endfor %}
     </ul>
     
