@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.urls import reverse
 from django.shortcuts import render, redirect, resolve_url
 from .models import Task #Importamos el modelo a las vistas
 def homeView(request):
@@ -31,7 +32,7 @@ def create_task(request):
        # print("*******")
        # print(new_task)
        #print("*******")
-        Task.objects.create(decription=new_task)
-        return redirect(reversed('create-task'))
+        Task.objects.create(description=new_task,done=False)
+        return redirect(reverse('create-task'))
 
     return render(request,'home/create_task.html')
