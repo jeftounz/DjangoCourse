@@ -1,3 +1,11 @@
+{% extends 'home/master.html' %}
+
+{% block content %}
+
+{% endblock %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +18,7 @@
     <span>La ubicacion es /home/templates/home/index.html</span>-->
     <h1>{{ message }}</h1> 
     <!--Estamos utilizando el contexto en el archivo views de la carpeta home-->
+    
     <h2>{{ message2 }}</h2>
     <ul>
         {% for task in tasks %}

@@ -7,7 +7,7 @@ from django.db import models
 #Siempre se crea un modelo con models.Model
 class Task(models.Model):
     description=models.CharField(max_length=255)
-    done=models.BooleanField()
+    done=models.BooleanField(default=False)
 
 #NOTA:cada vez que hacemos una migracion utilizando el manage.py 
 #Los modelos creados aqui se conviernten en tablas de SQL lite
