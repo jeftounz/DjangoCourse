@@ -1,25 +1,26 @@
 {% extends 'home/master.html' %}
-
-{% block content %}
-
+{% block title%}
+home
 {% endblock %}
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <title>Django</title>
-</head>
-<body>
-    <!--<h1>Hola mundo, este es mi segunda vista!!!</h1>
+{% block content %}
+  <!--<h1>Hola mundo, este es mi segunda vista!!!</h1>
     <p>Esta vez utilizando un html como template</p>
     <span>La ubicacion es /home/templates/home/index.html</span>-->
-    <h1>{{ message }}</h1> 
+    <h1>**{{ message }}**</h1> 
     <!--Estamos utilizando el contexto en el archivo views de la carpeta home-->
-    
     <h2>{{ message2 }}</h2>
+    {%if not tasks %}
+        <h5>Terminaste todas tus tareas !!! Felicitades, campeon!!!</h5>
+    {% else %}
+        <ul>
+            {% for task in tasks %}
+            <li style='color: {% if task.done %} green {% else %} red {% endif %};'>
+                {{task.description}}
+            </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <ul>
         {% for task in tasks %}
         <li>{{ task.description }} - {% if task.done  %}Terminada{% else %}Aun falta por hacer{% endif %}</li>
@@ -31,5 +32,9 @@
     {% else %}
     <span>La lista tiene objetos en ella</span>
     {% endif %}
-</body>
-</html>
+{% endblock %}
+
+
+
+
+  
