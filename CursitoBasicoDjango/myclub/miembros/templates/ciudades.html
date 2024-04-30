@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudades de Venezuela</title>
+</head>
+<body>
+    <h1>Este es un formulario para poder probar como registrar las ciudades</h1>
+    <form action="" method="post" id="ciudadForm">
+        {% csrf_token %}
+        {{ form.as_p }} <!-- Renderizar el formulario CiudadForm -->
+        <p>
+            <button type="submit">Guardar</button> <!-- Botón para enviar el formulario -->
+        </p>
+    </form>
+      
+ 
+</body>
+</html>
