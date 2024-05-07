@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html lang="en">
     <head>
-      <title>Job Dashboard | By Code Info</title>
+      <title>Base</title>
       <link rel="stylesheet" href="../static/style.css" />
       <!-- Font Awesome Cdn Link -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -11,43 +11,89 @@
         <nav>
           <div class="navbar">
             <div class="logo">
-              <img src="/pic/logo.jpg" alt="">
-              <h1>Panel administrador</h1>
+              <img src="../media/dasboard/forma-abstracta.png" alt="Este es el logo de la aplicacion">
+              <h1>Menu principal</h1>
             </div>
             <ul>
               <li><a href="#">
                 <i class="fas fa-user"></i>
-                <span class="nav-item">Dashboard</span>
+                <span class="nav-item">Personas</span> 
+                <!--En esta funcion se van a:
+                registrar personas
+                modificar perfil personas
+                eliminar registros
+                designar roles-->
               </a>
               </li>
               <li><a href="#">
-                <i class="fas fa-chart-bar"></i>
-                <span class="nav-item">Analytics</span>
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <span class="nav-item">Materias</span>
+                 <!--En esta funcion se van a:
+                registrar materias
+                modificar materias
+                eliminar materias
+                designar sesion a la materia-->
               </a>
               </li>
               <li><a href="#">
                 <i class="fas fa-tasks"></i>
-                <span class="nav-item">Jobs Board</span>
+                <span class="nav-item">Asistencias</span>
+                <!--En esta seccion se van a:
+                Visualizar la asistencia de profesores por sesion
+                Visualizar la asistencia de alumnos por sesion
+                Visualizar la caja de denuncias y/oh fallas
+                Imprimir informe de asistencia durante el periodo academico-->
+                <!--EN ESTA SESION SE CREARA LA CONEXION ENTRE DJANGO Y LA APP FLUTTER-->
               </a>
               </li>
               <li><a href="#">
                 <i class="fab fa-dochub"></i>
-                <span class="nav-item">Documnents</span>
+                <span class="nav-item">Secciones</span>
+                <!--En esta funcion se van a:
+                registrar sesiones
+                modificar sesiones
+                eliminar sesiones
+                designar profesor
+                designar alumnos inscritos a la sesión
+                Designar el horario a la sesion
+                -->
               </a>
               </li>
               <li><a href="#">
-                <i class="fas fa-cog"></i>
-                <span class="nav-item">Setting</span>
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i> <!--ESTE ES UNA FUNCION EXTRA -->
+                <span class="nav-item">Carga de notas</span>
+                <!--En esta seccion se van a cargar las notas 
+                de cada alumno por sesion mediante gemini de google-->
               </a>
               </li>
               <li><a href="#">
-                <i class="fas fa-question-circle"></i>
-                <span class="nav-item">Help</span>
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <span class="nav-item">Agenda</span>
+                 <!--En esta funcion se van a:
+                Registrar  periodo academico
+                Modificar periodo academico
+                Eliminar periodo academico
+
+                Agendar fechas de parciales
+                Agendar reuniones 
+                 
+                -->
+              </a>
+              </li>
+              <li><a href="#">
+                <i class="fa fa-crosshairs" aria-hidden="true"></i><!--ESTE ES UNA FUNCION EXTRA -->
+                <span class="nav-item">Informes</span>
+                 <!--En esta funcion se van a:
+                Mostrar denuncias por parte del alumnado y profesorado
+                Mostrar el desempeño de cada profesor , alumno
+                y sesion
+                 
+                -->
               </a>
               </li>
               <li><a href="#" class="logout">
                 <i class="fas fa-sign-out-alt"></i>
-                <span class="nav-item">Logout</span>
+                <span class="nav-item">Cerrar sesión</span>
               </a>
               </li>
             </ul>
@@ -55,12 +101,12 @@
         </nav>
         <section class="main">
           <div class="main-top">
-            <p>Explore the universe!</p>
+            <p>Bienvenido a E-asist</p>
           </div>
           <div class="main-body">
-            <h1>Recent Jobs</h1>
+            <h1>Estadisticas generales</h1>
           
-          <div class="search_bar">
+          <!--<div class="search_bar">
             <input type="search" placeholder="Search job here...">
             <select name="" id="">
               <option>Category</option>
@@ -71,8 +117,8 @@
             <select class="filter">
               <option>Filter</option>
             </select>
-          </div>
-          <div class="tags_bar">
+          </div>-->
+          <!--<div class="tags_bar">
             <div class="tag">
               <i class="fas fa-times"></i>
               <span>Programming</span>
@@ -89,87 +135,75 @@
               <i class="fas fa-times"></i>
               <span>JavaScript</span>
             </div>
-          </div>
-          <div class="row">
+          </div>-->
+          <!--<div class="row">
             <p>There are more than <span>400</span> Jobs</p>
             <a href="#">See all</a>
-          </div>
+          </div>-->
           <div class="job_card">
             <div class="job_details">
               <div class="img">
-                <i class="fab fa-google-drive"></i>
+                <i class="fa fa-users" aria-hidden="true"></i>
               </div>
               <div class="text">
-                <h2>UX Designer</h2>
-                <span>Google Drive - Junior Post</span>
+                <h2>Numero de Alumnos registrados</h2>
+                <span>80</span>
               </div>
             </div>
-            <div class="job_salary">
+            <!--<div class="job_salary">
               <h4>$6.7 - $12.5k /yr</h4>
               <span>1 days ago</span>
-            </div>
+            </div>-->
           </div>
           
           <div class="job_card">
             <div class="job_details">
               <div class="img">
-                <i class="fab fa-google"></i>
+                <i class="fa fa-address-card" aria-hidden="true"></i>
               </div>
               <div class="text">
-                <h2>JavaScript Developer</h2>
-                <span>Google - Senior Post</span>
+                <h2>Numero de profesores registrados</h2>
+                <span>70</span>
               </div>
             </div>
-            <div class="job_salary">
+            <!--<div class="job_salary">
               <h4>$8.7 - $13.2k /yr</h4>
               <span>2 days ago</span>
-            </div>
+            </div>-->
           </div>
+
           <div class="job_card">
             <div class="job_details">
               <div class="img">
-                <i class="fab fa-facebook"></i>
+                <i class="fa fa-sitemap" aria-hidden="true"></i>
               </div>
               <div class="text">
-                <h2>Product Developer</h2>
-                <span>Facbook - Manager Post</span>
+                <h2>Numero de secciones registradas</h2>
+                <span>90</span>
               </div>
             </div>
-            <div class="job_salary">
+            <!--<div class="job_salary">
               <h4>$11 - $18.5k /yr</h4>
               <span>2 days ago</span>
-            </div>
+            </div>-->
           </div>
+
           <div class="job_card">
             <div class="job_details">
               <div class="img">
-                <i class="fab fa-git-alt"></i>
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
               </div>
               <div class="text">
-                <h2>Programmer</h2>
-                <span>Github - Juni Post</span>
+                <h2>Numero de materias registradas</h2>
+                <span>180</span>
               </div>
             </div>
-            <div class="job_salary">
+            <!--<div class="job_salary">
               <h4>$6 - $11.5k /yr</h4>
               <span>3 days ago</span>
-            </div>
+            </div>-->
           </div>
-          <div class="job_card">
-            <div class="job_details">
-              <div class="img">
-                <i class="fab fa-youtube"></i>
-              </div>
-              <div class="text">
-                <h2>React.js Expert</h2>
-                <span>Youtube - VIP</span>
-              </div>
-            </div>
-            <div class="job_salary">
-              <h4>$12.5 - $25.5k /yr</h4>
-              <span>4 days ago</span>
-            </div>
-          </div>
+
         </div>
         </section>
       </div>
