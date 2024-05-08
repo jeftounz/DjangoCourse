@@ -41,6 +41,12 @@ def ciudadesVenezuela(request):
     }
     return render(request, "ciudades.html", context)
 
+def dashboard(request):
+    
+    template=loader.get_template('dashboard.html')
+    context={
+    }
 
+    return HttpResponse(template.render(context, request))
 
 

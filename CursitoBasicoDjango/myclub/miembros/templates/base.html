@@ -1,8 +1,12 @@
 <!DOCTYPE html>
     <html lang="en">
     <head>
-      <title>Base</title>
-      <link rel="stylesheet" href="../static/style.css" />
+      <title>
+        {%block title%}
+
+        {% endblock %}
+      </title>
+      <link rel="stylesheet" href="../static/style.css" /> <!-- Asegúrate de usar la etiqueta static aquí también -->
       <!-- Font Awesome Cdn Link -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     </head>
@@ -11,7 +15,7 @@
         <nav>
           <div class="navbar">
             <div class="logo">
-              <img src="../media/dasboard/forma-abstracta.png" alt="Este es el logo de la aplicacion">
+              <a href="dashboard.html"> <img src="../media/dasboard/forma-abstracta.png" alt="Este es el logo de la aplicacion">
               <h1>Menu principal</h1>
             </div>
             <ul>
@@ -104,8 +108,13 @@
             <p>Bienvenido a E-asist</p>
           </div>
           <div class="main-body">
-            <h1>Estadisticas generales</h1>
-          
+
+            {% block content %}
+            
+            {% endblock %}
+
+           
+            
           <!--<div class="search_bar">
             <input type="search" placeholder="Search job here...">
             <select name="" id="">
@@ -140,72 +149,10 @@
             <p>There are more than <span>400</span> Jobs</p>
             <a href="#">See all</a>
           </div>-->
-          <div class="job_card">
-            <div class="job_details">
-              <div class="img">
-                <i class="fa fa-users" aria-hidden="true"></i>
-              </div>
-              <div class="text">
-                <h2>Numero de Alumnos registrados</h2>
-                <span>80</span>
-              </div>
-            </div>
-            <!--<div class="job_salary">
-              <h4>$6.7 - $12.5k /yr</h4>
-              <span>1 days ago</span>
-            </div>-->
-          </div>
-          
-          <div class="job_card">
-            <div class="job_details">
-              <div class="img">
-                <i class="fa fa-address-card" aria-hidden="true"></i>
-              </div>
-              <div class="text">
-                <h2>Numero de profesores registrados</h2>
-                <span>70</span>
-              </div>
-            </div>
-            <!--<div class="job_salary">
-              <h4>$8.7 - $13.2k /yr</h4>
-              <span>2 days ago</span>
-            </div>-->
-          </div>
+        
 
-          <div class="job_card">
-            <div class="job_details">
-              <div class="img">
-                <i class="fa fa-sitemap" aria-hidden="true"></i>
-              </div>
-              <div class="text">
-                <h2>Numero de secciones registradas</h2>
-                <span>90</span>
-              </div>
-            </div>
-            <!--<div class="job_salary">
-              <h4>$11 - $18.5k /yr</h4>
-              <span>2 days ago</span>
-            </div>-->
-          </div>
-
-          <div class="job_card">
-            <div class="job_details">
-              <div class="img">
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-              </div>
-              <div class="text">
-                <h2>Numero de materias registradas</h2>
-                <span>180</span>
-              </div>
-            </div>
-            <!--<div class="job_salary">
-              <h4>$6 - $11.5k /yr</h4>
-              <span>3 days ago</span>
-            </div>-->
-          </div>
-
-        </div>
-        </section>
+        </div> <!--Este div es del main body-->
+        </section><!--Este es la seccion Main-->
       </div>
     </body>
     </html>
