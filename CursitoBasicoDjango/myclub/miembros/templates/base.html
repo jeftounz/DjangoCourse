@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -6,7 +7,7 @@
 
         {% endblock %}
       </title>
-      <link rel="stylesheet" href="../static/style.css" /> <!-- Asegúrate de usar la etiqueta static aquí también -->
+      <link type="text/css" rel="stylesheet" href='{% static "css/style.css" %}' /> <!-- Asegúrate de usar la etiqueta static aquí también -->
       <!-- Font Awesome Cdn Link -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     </head>
@@ -15,7 +16,7 @@
         <nav>
           <div class="navbar">
             <div class="logo">
-              <a href="dashboard.html"> <img src="../media/dasboard/forma-abstracta.png" alt="Este es el logo de la aplicacion">
+              <a href="#"> <img src='{% static "imgs/dasboard/logo.png" %}' alt="Este es el logo de la aplicacion">
               <h1>Menu principal</h1>
             </div>
             <ul>
